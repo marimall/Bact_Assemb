@@ -29,7 +29,6 @@ def quality_controls(fastq , res_file, s ):
     os.system(f"spades -1 {res_file}/filtered_fastq/{s}_R1_fastq.fastq.gz -2 {res_file}/filtered_fastq/{s}_R2_fastq.fastq.gz -o {res_file}/assembly -t 48 ")    
     
     os.system(f"cp {res_file}/assembly/scaffolds.fasta  {args.input_path}results/all_assemblies/{s}_scaffolds.fasta")
-    assert(0)
 
 
 parser = argparse.ArgumentParser(description='An efficient way to process bacterial whole genome single and paired-end data',  epilog = "author: Maria Malliarou <maria.malliarou.ger@gmail.com> v1.1" )
